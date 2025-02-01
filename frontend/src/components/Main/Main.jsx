@@ -40,7 +40,7 @@ const Main = () => {
                 </span>
             </p>
             <p>
-            What's on your mind today?
+            Let's know each other
             </p>
         </div>
         <div className="cards">

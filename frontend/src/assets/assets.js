@@ -13,6 +13,7 @@ import health_icon from './health_icon.jpg';
 import gallery_icon from './gallery_icon.png';
 import send_icon from './send_icon.png';
 import mic_icon from './mic_icon.png';
+import coffee from './coffee.jpg';
 export const assets = 
 {
     menuicon,
@@ -29,6 +30,6 @@ export const assets =
     health_icon,
     gallery_icon,
     mic_icon,
-    send_icon
-
+    send_icon,
+    coffee
 }

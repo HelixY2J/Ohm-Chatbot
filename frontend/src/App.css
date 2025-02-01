@@ -1,8 +1,9 @@
 /* Root styling */
 #root {
+  min-height: 100vh; /* Ensure the root takes up the full height of the screen */
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0; /* Remove padding to avoid restricting height */
   text-align: center;
   background-color: #f9f9f9; /* Light background color for a soft feel */
   font-family: 'Arial', sans-serif;
