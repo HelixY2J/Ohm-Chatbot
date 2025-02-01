@@ -3,87 +3,80 @@
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
-    background-color: #f9f9f9; /* Light soft background color */
-    color: #4a4a4a; /* Dark gray for text to ensure readability */
-  }
-  .Main .nav {
+    background-color: #fcc88f;
+}
+
+.Main .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .Main .nav:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
-  }
-.Main .nav img{
+    color: #3c3c3c;
+}
+
+.Main .nav img {
     width: 40px;
     border-radius: 50%;
 }
-.main-container{
+
+.main-container {
     max-width: 900px;
     margin: auto;
 }
+
 .Main .greet {
-    margin: 50px 0;
+    margin: 50px 0px;
     font-size: 56px;
-    color: #a8a8a8;
+    color: #4b4b4b;
     font-weight: 500;
     padding: 20px;
-    text-align: center;
-  }
-  .Main .greet span {
-    background: -webkit-linear-gradient(16deg, #4b90ff, #ff8c94);
+}
+
+.Main .greet span {
+    background: -webkit-linear-gradient(16deg, #ff5546, #fcc88f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: transform 0.3s ease;
-  }
-  .Main .greet span:hover {
-    transform: scale(1.1); /* Slightly scale up the greeting text on hover */
-  }
-  
-.Main .cards{
+}
+
+.Main .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
     padding: 20px;
 }
+
 .Main .card {
     height: 200px;
     padding: 15px;
-    background-color: #f5f8fa;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
-  }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .Main .card img {
+.Main .card img {
     width: 70px;
     padding: 5px;
     position: absolute;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 20px;
     bottom: 10px;
     right: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-.Main .card p{
-    color: #585858;
+}
+
+.Main .card p {
+    color: #4b4b4b;
     font-size: 17px;
 }
+
 .Main .card:hover {
-  transform: scale(1.05); /* Slightly scale up the card */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Add a larger shadow for elevation */
-  background-color: #dfe4ea; /* Change background color for hover */
+    background-color: #ffe2c2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.Main-bottom{
+
+.Main-bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -91,25 +84,22 @@
     padding: 0px 20px;
     margin: auto;
 }
+
 .search-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #e9f1f9;
+    background-color: #ffffff; 
     padding: 10px 20px;
     border-radius: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  .search-box:hover {
-    transform: scale(1.05); /* Slightly scale up the search box */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for emphasis */
-  }
-.search-box img{
+}
+
+.search-box img {
     width: 35px;
     cursor: pointer;
 }
+
 .search-box input {
     flex: 1;
     background: transparent;
@@ -117,24 +107,20 @@
     outline: none;
     padding: 8px;
     font-size: 18px;
-    border-radius: 25px;
-    color: #4a4a4a;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-  }
-  /* .search-box input:hover {
-    border: 2px solid #4b90ff; 
-    box-shadow: 0 0 10px rgba(75, 144, 255, 0.3); 
-  } */
-.search-box div{
+    color: #3c3c3c;
+}
+
+.search-box div {
     display: flex;
     align-items: center;
     gap: 15px;
-
 }
-.Main .bottom-info{
+
+.Main .bottom-info {
     font-size: 13px;
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+    color: #585858;
 }
 
