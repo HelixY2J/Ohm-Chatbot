@@ -1,18 +1,26 @@
-.Main{
+.Main {
     flex: 1;
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
-
-}
-.Main .nav{
+    background-color: #f9f9f9; /* Light soft background color */
+    color: #4a4a4a; /* Dark gray for text to ensure readability */
+  }
+  .Main .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    color: #585858;
-}
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .Main .nav:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  }
 .Main .nav img{
     width: 40px;
     border-radius: 50%;
@@ -21,33 +29,41 @@
     max-width: 900px;
     margin: auto;
 }
-.Main .greet{
-    margin: 50px 0px;
+.Main .greet {
+    margin: 50px 0;
     font-size: 56px;
-    color: #c4c7c5;
+    color: #a8a8a8;
     font-weight: 500;
     padding: 20px;
-}
-.Main .greet span{
-    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+    text-align: center;
+  }
+  .Main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff8c94);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+    transition: transform 0.3s ease;
+  }
+  .Main .greet span:hover {
+    transform: scale(1.1); /* Slightly scale up the greeting text on hover */
+  }
+  
 .Main .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     gap: 15px;
     padding: 20px;
 }
-.Main .card{
+.Main .card {
     height: 200px;
     padding: 15px;
-    background-color: #f0f4f9;
-    border-radius: 10px;
+    background-color: #f5f8fa;
+    border-radius: 12px;
     position: relative;
     cursor: pointer;
-}
-.Main .card img{
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+  }
+
+  .Main .card img {
     width: 70px;
     padding: 5px;
     position: absolute;
@@ -55,13 +71,17 @@
     border-radius: 20px;
     bottom: 10px;
     right: 10px;
-}
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
 .Main .card p{
     color: #585858;
     font-size: 17px;
 }
-.Main .card:hover{
-    background-color: #dfe4ea;
+.Main .card:hover {
+  transform: scale(1.05); /* Slightly scale up the card */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Add a larger shadow for elevation */
+  background-color: #dfe4ea; /* Change background color for hover */
 }
 .Main-bottom{
     position: absolute;
@@ -71,28 +91,40 @@
     padding: 0px 20px;
     margin: auto;
 }
-.search-box{
+.search-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #f0f4f9;
+    background-color: #e9f1f9;
     padding: 10px 20px;
     border-radius: 50px;
-}
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .search-box:hover {
+    transform: scale(1.05); /* Slightly scale up the search box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for emphasis */
+  }
 .search-box img{
     width: 35px;
     cursor: pointer;
 }
-.search-box input{
+.search-box input {
     flex: 1;
     background: transparent;
     border: none;
     outline: none;
     padding: 8px;
     font-size: 18px;
-
-}
+    border-radius: 25px;
+    color: #4a4a4a;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  /* .search-box input:hover {
+    border: 2px solid #4b90ff; 
+    box-shadow: 0 0 10px rgba(75, 144, 255, 0.3); 
+  } */
 .search-box div{
     display: flex;
     align-items: center;
@@ -105,3 +137,4 @@
     text-align: center;
     font-weight: 300;
 }
+

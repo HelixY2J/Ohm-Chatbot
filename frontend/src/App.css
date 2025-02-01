@@ -1,10 +1,14 @@
+/* Root styling */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f9f9f9; /* Light background color for a soft feel */
+  font-family: 'Arial', sans-serif;
 }
 
+/* Logo hover effect with soft colors */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -12,12 +16,13 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #a8d0e6); /* Light blue glow */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #ff8c94); /* Soft pink glow */
 }
 
+/* Logo spin animation (for reduced motion preference) */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,10 +38,56 @@
   }
 }
 
+/* Card styling */
 .card {
   padding: 2em;
+  background-color: #f5f8fa; /* Light, soft background */
+  border-radius: 12px; /* Rounded corners for the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
+/* Chat Bubbles (ensure the rounded corner effect) */
+.chat-bubble {
+  background-color: #e4f7ff; /* Soft blue bubble background */
+  padding: 12px 20px;
+  border-radius: 30px; /* Round chat bubbles */
+  max-width: 70%;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #4a4a4a;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Fade-in animation for chat bubbles */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Message received sound */
+@keyframes chime {
+  0% {
+    background-color: #e4f7ff; 
+  }
+  50% {
+    background-color: #a8d0e6; /* Change color on message receive */
+  }
+  100% {
+    background-color: #e4f7ff; /* Restore original color */
+  }
+}
+
+/* Soft color text */
 .read-the-docs {
-  color: #888;
+  color: #a8a8a8; /* Lighter gray for text */
 }
