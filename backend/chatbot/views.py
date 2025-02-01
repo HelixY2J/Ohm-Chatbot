@@ -20,7 +20,7 @@ def call_the_bard(msg):
     return response.text
 
 
-
+# system prompt - " assume - actions - decide - breathing exercise  
 def home(request):
     csrf_token = get_token(request)
     if request.method == 'POST':

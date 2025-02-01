@@ -1,42 +1,15 @@
-// import React from 'react'
-// import Sidebar from './components/Sidebar/Sidebar'
-// import Main from './components/Main/Main'
-// const App = () => {
-//   return (
-//     <>
-//       <Sidebar/>
-//       <Main />
-//     </>
-//   )
-// }
-
-// export default App
-
-import { useState } from "react"
-
-import Sidebar from "./components/Sidebar/Sidebar"
-import Main from "./components/Main/Main"
-import HeroPage from "./components/HeroPage/HeroPage"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeroPage from "./components/Hero/HeroPage";
+import ChatPage from "./components/ChatPage/ChatPage";
 function App() {
-  const [showChat, setShowChat] = useState(false)
-
-  const handleChatStart = () => {
-    setShowChat(true)
-    console.log("Starting chat...")
-  }
-
   return (
-    <div className="App">
-      {!showChat ? (
-        <HeroPage onChatStart={handleChatStart} />
-      ) : (
-        <>
-          <Sidebar />
-          <Main />
-        </>
-      )}
-    </div>
-  )
+    <Router>
+    <Routes>
+      <Route path="/" element={<HeroPage />} />
+      <Route path="/chat" element={<ChatPage />} />
+    </Routes>
+  </Router>
+  );
 }
 
-export default App
+export default App;

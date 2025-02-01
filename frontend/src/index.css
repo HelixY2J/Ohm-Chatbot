@@ -9,3 +9,5 @@
   min-height: 100vh;
   display: flex;
 }
+
+@import "tailwindcss";

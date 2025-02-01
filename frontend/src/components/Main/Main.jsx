@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import './Main.css';
 import { assets } from '../../assets/assets';
+import BreathingModel from '../BreathingModel/BreathingModel';
+
+
 const Main = () => {
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
+    const [showModal, setShowModal] = useState(false);
+    const handleModalShow = () => setShowModal(true); // Show modal
+    const handleModalHide = () => setShowModal(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -25,6 +31,7 @@ const Main = () => {
     };
     
   return (
+    
     <div className='Main'>
         <div className="nav">
             <p>
@@ -43,13 +50,28 @@ const Main = () => {
             Let's know each other
             </p>
         </div>
+
+        {/* <div className="bubble-container">
+          <Example />
+        </div> */}
+
+        {/* <div className="bubble-container">
+          <BlockText />
+        </div>
+ */}
+
+       
+
+
+  
+
         <div className="cards">
-            <div className="card">
+            <div className="card" onClick={handleModalShow}>
                 <p>
                 Feeling stressed. Suggest inhaling exhaling calming exercises.</p>
                 <img src={assets.exercise_icon} alt="" />     
             </div>
-            <div className="card">
+            <div className="card" >
                 <p>
                 Suggest daily affirmation: ‘I am capable, strong, and can handle this.’ </p>
                 <img src={assets.affirm_icon} alt="" />     
@@ -64,6 +86,10 @@ const Main = () => {
                 Suggest a balanced diet which can help in uplifting the mood</p>
                 <img src={assets.health_icon} alt="" />     
             </div>
+            <BreathingModel
+        show={showModal}
+        onHide={handleModalHide}
+      />
         </div>
         <div className="Main-bottom">
             <div className="search-box">
@@ -76,11 +102,11 @@ const Main = () => {
               onChange={(e) => setMessage(e.target.value)} 
             />
                 <div>
-                    <img src={assets.gallery_icon} alt="" />
-                    <img src={assets.mic_icon} alt="" />
+                    <img src={assets.doc} alt="" />
+                    <img src={assets.mic} alt="" />
                     {/* <img src={assets.send_icon} alt="" /> */}
                     <img 
-                        src={assets.send_icon} 
+                        src={assets.arrow} 
                         alt="Send" 
                         onClick={handleSubmit} // make POST
                     />
