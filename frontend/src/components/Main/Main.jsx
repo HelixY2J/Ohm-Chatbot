@@ -21,14 +21,34 @@ const Main = () => {
   }, [chatHistory])
 
   const handleSubmit = async () => {
+    console.log("Message before check:", message); 
     if (!message.trim()) return
 
     const newUserMessage = { type: "user", content: message, id: Date.now() }
     setChatHistory((prev) => [newUserMessage, ...prev])
 
     try {
-      const botResponse = "This is the bot response based on your message."
-      const newBotMessage = { type: "bot", content: botResponse, id: Date.now() + 1 }
+      console.log("Sending message to backend:", message);
+      const csrfToken = window.CSRF_TOKEN
+    //  const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value; 
+      const res = await fetch('/bard/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrfToken,
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      const data = await res.json();
+
+      if (data.error) {
+        console.error('Error:', data.error);
+        return;
+      }
+
+     // const botResponse = "This is the bot response based on your message."
+      const newBotMessage = { type: "bot", content: data.response, id: Date.now() + 1 }
 
       setTimeout(() => {
         setChatHistory((prev) => [newBotMessage, ...prev])
