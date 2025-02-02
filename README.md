@@ -25,6 +25,7 @@ npm install
 npm run build
 
 Start the frontend server
+
 npm start
 Set up and run the backend
 
