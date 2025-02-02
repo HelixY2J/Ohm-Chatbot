@@ -33,8 +33,7 @@ def get_breathing_exercise():
     6. As you exhale, silently say: *"I breathe out stress and tension."* 
     7. Continue this for 10-20 minutes, focusing on the sensations in your body.  
 
-    Take your time. Press the heart button above for better exp
-
+    Tap the ❤️ above to start a calming breathing animation for a better relaxation experience
     """
     return exercise
 
