@@ -1,17 +1,64 @@
-# React + Vite
+# Ohm Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ohm is a smart, interactive chatbot designed to provide support, guidance, and meaningful conversations. It helps users with various queries, journaling prompts, affirmations, and emotional support.
 
-Currently, two official plugins are available:
+## Features
+- AI-powered chatbot with empathetic responses
+- Voice input and response capabilities
+- Interactive UI with a modern chat interface
+- Suggestions for journaling, affirmations, and mental wellness
+- Easy-to-use React frontend with a Node.js and Python backend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+### Prerequisites
+Ensure you have the following installed:
+- Node.js
+- Python
+- npm
+- pip
 
-### Django
+### Setup Instructions
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your-username/ohm-chatbot.git
+   cd ohm-chatbot
+   ```
 
-Run the server - 
+2. **Install frontend dependencies**
+   ```sh
+   cd frontend
+   npm install
+   ```
 
+3. **Build the frontend** (if required)
+   ```sh
+   npm run build
+   ```
 
-```python 
-    python manage.py runserver
+4. **Start the frontend server**
+   ```sh
+   npm start
+   ```
+
+5. **Set up and run the backend**
+   - Install Python dependencies:
+     ```sh
+     pip install -r requirements.txt
+     ```
+   - Start the backend server:
+     ```sh
+     python manage.py startserver
+     ```
+
+## Project Structure
 ```
+/ohm-chatbot
+│── frontend/        # React frontend
+│── backend/         # Python backend
+│── assets/          # Images, icons, and other static files
+│── README.md        # Project documentation
+│── requirements.txt # Python dependencies
+│── package.json     # Node.js dependencies
+```
+
+
