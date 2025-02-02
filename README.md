@@ -1,17 +1,44 @@
-# React + Vite
+Ohm Chatbot
+Ohm is a smart, interactive chatbot designed to provide support, guidance, and meaningful conversations. It helps users with various queries, journaling prompts, affirmations, and emotional support.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+AI-powered chatbot with empathetic responses
+Voice input and response capabilities
+Interactive UI with a modern chat interface
+Suggestions for journaling, affirmations, and mental wellness
+Easy-to-use React frontend with a Node.js and Python backend
 
-Currently, two official plugins are available:
+Installation
+Prerequisites
+Ensure you have the following installed:
+Node.js
+Python
+npm
+pip
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Setup Instructions
+Clone the repository
+cd ohm-chatbot
+Install frontend dependencies
+cd frontend
+npm install
+npm run build
 
-### Django
+Start the frontend server
+npm start
+Set up and run the backend
 
-Run the server - 
+Install Python dependencies:
+pip install -r requirements.txt
 
+Start the backend server:
+python manage.py startserver
 
-```python 
-    python manage.py runserver
-```
+Project Structure
+/ohm-chatbot
+│── frontend/        # React frontend
+│── backend/         # Python backend
+│── assets/          # Images, icons, and other static files
+│── README.md        # Project documentation
+│── requirements.txt # Python dependencies
+│── package.json     # Node.js dependencies
