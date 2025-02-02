@@ -3,7 +3,6 @@ import "./Main.css"
 // import { assets } from "../../assets/assets"
 import {assets} from '../../assets/assets.js'
 import BreathingModel from "../BreathingModel/BreathingModel"
-import { ActivityIcon as Exercise, MessageSquare, BookOpen, Apple, CoffeeIcon, Coffee } from "lucide-react"
 
 const Main = () => {
   const [message, setMessage] = useState("")
@@ -30,7 +29,6 @@ const Main = () => {
     try {
       console.log("Sending message to backend:", message);
       const csrfToken = window.CSRF_TOKEN
-    //  const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value; 
       const res = await fetch('/bard/', {
         method: 'POST',
         headers: {
@@ -67,10 +65,9 @@ const Main = () => {
       <div className="nav">
         <p>Ohm</p>
         <div className="icon-container flex space-x-4">
-          <Exercise onClick={handleModalShow} className="w-6 h-6 cursor-pointer" />
-          <MessageSquare className="w-6 h-6 cursor-pointer" />
-          <BookOpen className="w-6 h-6 cursor-pointer" />
-          <Apple className="w-6 h-6 cursor-pointer" />
+        <img src={assets.heart || "/placeholder.svg"} alt="Send" onClick={handleModalShow} />
+
+       
         </div>
         <img src={assets.coffeeIcon || "/placeholder.svg"} alt="" className="ml-auto" />
       </div>
