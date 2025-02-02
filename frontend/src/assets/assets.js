@@ -12,7 +12,6 @@ import journal_icon from './journal_icon.jpg';
 import health_icon from './health_icon.jpg';
 import gallery_icon from './gallery_icon.png';
 import send_icon from './send_icon.png';
-import mic_icon from './mic_icon.png';
 import coffeeIcon from './coffee.svg'
 import arrow from './arrow.svg'
 import doc from './doc.svg'
@@ -21,14 +20,14 @@ import menu from './menu.svg'
 import mic from './mic.svg'
 import settings from './settings.svg'
 import breathing from './lotties/e0b35676-0f05-4f11-9305-4cfd3c5cfa1b.json'
-
-
+import heart from './heart.svg'
 import ohm from './bot.png'
 import fluffy from './fluffy.png'
 export const assets = 
 {
     
     ohm,
+    heart,
     menuicon,
     fluffy,
     icon,
@@ -43,7 +42,6 @@ export const assets =
     journal_icon,
     health_icon,
     gallery_icon,
-    mic_icon,
     send_icon,
     settings,
     doc,
