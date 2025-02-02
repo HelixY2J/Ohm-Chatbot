@@ -3,5 +3,6 @@ from chatbot.views import *
 
 
 urlpatterns = [
-    path('',home,name='home')
+    path('',home,name='home'),
+    path('bard/',bard,name='bard')
 ]
