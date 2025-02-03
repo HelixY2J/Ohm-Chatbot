@@ -4,20 +4,34 @@ import { motion } from "framer-motion"
 import CoffeeSVG from '../../assets/coffee.svg'
 import NeuButton from "../Button/NeuButton"
 import ChipTabs from "../DropDown/DropDown"
+import DecorativeElements from "../Decoration/Decorative";
+
+
 const HeroPage = ({ onChatStart }) => {
   const navigate = useNavigate(); 
   
   const handleChatStart = () => {
-    // console.log("Navigating to ChatPage...");
     navigate("/chat");
   };
+
+  const handleLanguageClick = (tab) => {
+    if (tab === "About") {
+      console.log("Language tab clicked!");
+      navigate("/aboot");
+    }
+    if (tab === "Pricing") {
+      navigate("/pay");
+    }
+  };
+
+
   return (
-    <div className="min-h-screen w-full bg-[#FCC88F] flex flex-col justify-center items-center p-8 text-gray-800 font-poppins">
-      
+    <div className="min-h-screen w-full bg-[#FFCC80] flex flex-col justify-center items-center p-8 text-gray-800 font-poppins">
+      <DecorativeElements />
      
       <motion.div
         initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: -10 }}
+        animate={{ opacity: 1,x:-45, y: -70 }}
         transition={{ duration: 0.8 }}
         className="text-center mb-12"
       >
@@ -27,7 +41,7 @@ const HeroPage = ({ onChatStart }) => {
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8, x : -80 }}
-        animate={{ opacity: 1, scale: 1.6, x : 70}}
+        animate={{ opacity: 1, scale: 2.3, x : 70}}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-12"
       >
@@ -36,11 +50,12 @@ const HeroPage = ({ onChatStart }) => {
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8, x : -80}}
-        animate={{ opacity: 1, scale: 1.0, x : -30, y : -60}}
+        animate={{ opacity: 1, scale: 1.0, x : -70, y : -60}}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-12"
       >
-     <NeuButton label="lets talk"  onClick={handleChatStart}  />
+           <NeuButton label="Lets talk"  onClick={handleChatStart}  />
+
       {/* <NeuButton label="lets talk" onClick={onChatStart}></NeuButton> */}
       </motion.div>
 
@@ -50,7 +65,7 @@ const HeroPage = ({ onChatStart }) => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-12"
       >
-        <ChipTabs />
+          <ChipTabs onTabChange={handleLanguageClick} />
       </motion.div>
 
      

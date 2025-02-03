@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 import "./Main.css"
-// import { assets } from "../../assets/assets"
 import {assets} from '../../assets/assets.js'
 import BreathingModel from "../BreathingModel/BreathingModel"
+import DecorativeElements from "../Decoration/Decorative.jsx"
 
 const Main = () => {
   const [message, setMessage] = useState("")
@@ -44,8 +44,6 @@ const Main = () => {
         console.error('Error:', data.error);
         return;
       }
-
-     // const botResponse = "This is the bot response based on your message."
       const newBotMessage = { type: "bot", content: data.response, id: Date.now() + 1 }
 
       setTimeout(() => {
@@ -73,6 +71,7 @@ const Main = () => {
       </div>
       <div className="main-container">
         {chatHistory.length === 0 && (
+          
           <div className="greet">
             <p>
               <span>Hello!</span>
@@ -103,7 +102,7 @@ const Main = () => {
                 </div>
               )}
               <div
-                className={`max-w-[70%] p-4 rounded-lg bg-white shadow-md ${
+                className={`max-w-[70%] p-10 md:p-10 lg:p-8 rounded-lg bg-white shadow-md ${
                   chat.type === "user" ? "order-1" : "order-2"
                 }`}
               >
@@ -119,6 +118,7 @@ const Main = () => {
         </div>
 
         <BreathingModel show={showModal} onHide={handleModalHide} />
+        <DecorativeElements />
 
         <div className="Main-bottom">
           <div className="search-box">
