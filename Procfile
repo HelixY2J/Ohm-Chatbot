@@ -1,1 +1,1 @@
-gunicorn --workers=4 core.wsgi
+web: gunicorn --workers=4 core.wsgi
