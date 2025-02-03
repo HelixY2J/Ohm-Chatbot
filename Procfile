@@ -1,1 +1,1 @@
-web: gunicorn --workers=4 core.wsgi
+"startCommand": "gunicorn --workers=4 core.wsgi"
