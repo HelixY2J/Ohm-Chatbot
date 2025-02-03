@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Sidebar.css'
 import {assets} from '../../assets/assets.js'
 import BreathingModel from '../BreathingModel/BreathingModel.jsx'
+import { useNavigate } from "react-router-dom";  
 
 const Sidebar = () => {
     const[extended,setExtended] = useState(false)
@@ -9,7 +10,11 @@ const Sidebar = () => {
     const handleModalShow = () => setShowModal(true); 
     const handleModalHide = () => setShowModal(false);
 
-    //const [showExercise, setShowExercise] = useState(false);
+    const navigate = useNavigate(); 
+
+    const handleHome = () => {
+      navigate("/");
+    };
 
     return (
       <div className='sidebar'>
@@ -42,21 +47,20 @@ const Sidebar = () => {
           </div>
           <div className="bottom">
               <div className="bottom-item recent-entry" 
-              // onClick={() => setShowExercise(!showExercise)}>
-              onClick={handleModalShow}>
-                  <img src={assets.question_icon} alt="" />
+              onClick={handleHome}>
+                  <img src={assets.home} alt="" />
                   {extended?<p>
-                      Quotes
+                      Home
                   </p>:null}
               </div>
   
             
-              <div className="bottom-item recent-entry">
+              {/* <div className="bottom-item recent-entry">
                   <img src={assets.history_icon} alt="" />
                   {extended?<p>
                       Activity
                   </p>:null}
-              </div>
+              </div> */}
               <div className="bottom-item recent-entry">
                   <img src={assets.settings} alt="" />
                   {extended?<p>

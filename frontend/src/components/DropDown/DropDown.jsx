@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const tabs = ["Home", "Languages", "About", "Prices"];
+const tabs = ["Home", "About", "Pricing"];
 
-const ChipTabs = () => {
+const ChipTabs = ({onTabChange}) => {
   const [selected, setSelected] = useState(tabs[0]);
+
+  const handleTabClick = (tab) => {
+    setSelected(tab); // Update the selected tab
+    onTabChange(tab); // Pass the selected tab value to the parent component
+  };
 
   return (
     <div className="px-4 py-14 bg-[#FCC88F] flex items-center flex-wrap gap-2">
@@ -12,6 +17,7 @@ const ChipTabs = () => {
         <Chip
           text={tab}
           selected={selected === tab}
+          onTabClick={handleTabClick}
           setSelected={setSelected}
           key={tab}
         />
@@ -20,10 +26,10 @@ const ChipTabs = () => {
   );
 };
 
-const Chip = ({ text, selected, setSelected }) => {
+const Chip = ({ text, selected, setSelected, onTabClick }) => {
   return (
     <button
-      onClick={() => setSelected(text)}
+      onClick={() => onTabClick(text)}
       className={`${
         selected
           ? "text-white"

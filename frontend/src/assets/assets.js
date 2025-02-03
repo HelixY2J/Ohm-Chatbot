@@ -23,10 +23,13 @@ import breathing from './lotties/e0b35676-0f05-4f11-9305-4cfd3c5cfa1b.json'
 import heart from './heart.svg'
 import ohm from './bot.png'
 import fluffy from './fluffy.png'
+import home from './home.svg'
+
 export const assets = 
 {
     
     ohm,
+    home,
     heart,
     menuicon,
     fluffy,
